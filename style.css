@@ -1,1 +1,141 @@
+/* Fichier: style.css */
 
+/* === VARIABLES GLOBALES ET FONDATIONS === */
+:root {
+    --couleur-primaire: #004D40; /* Vert foncé/Émeraude (Équilibre, Nature) */
+    --couleur-secondaire: #4DB6AC; /* Turquoise/Menthe (Calme, Énergie) */
+    --couleur-accent: #FFD700; /* Or (Lumière, Sagesse) */
+    --couleur-fond: #F7FBFB; /* Blanc cassé très léger */
+    --couleur-claire: #E0F2F1; /* Vert très pâle */
+    --couleur-texte: #333333;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Police de base */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: var(--couleur-texte);
+    background-color: var(--couleur-fond);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* === TYPOGRAPHIE ET TITRES === */
+h1, h2, h3 {
+    color: var(--couleur-primaire);
+    text-align: center;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 2em;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+/* === EN-TÊTE (HEADER) ET NAVIGATION === */
+header {
+    background: var(--couleur-claire);
+    padding: 1.5em 0;
+    border-bottom: 2px solid var(--couleur-secondaire);
+}
+
+header h1 {
+    color: var(--couleur-primaire);
+    margin-bottom: 0.5em;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: var(--couleur-primaire);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--couleur-secondaire);
+    border-bottom: 2px solid var(--couleur-secondaire);
+    padding-bottom: 5px;
+}
+
+/* === SECTIONS GÉNÉRALES === */
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* === SECTION ACCUEIL/HÉRO (Mise en avant) === */
+.hero {
+    background-color: white; /* Fond blanc pour faire ressortir */
+    padding: 80px 0;
+}
+
+.hero p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* === BOUTONS (CTA) === */
+a[style*="background: #004D40"] { /* Ciblage des boutons dans le HTML */
+    background: var(--couleur-primaire) !important;
+    color: white !important;
+    padding: 12px 25px !important;
+    border-radius: 30px !important;
+    font-weight: 700 !important;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+}
+
+a[style*="background: #004D40"]:hover {
+    background: var(--couleur-secondaire) !important;
+}
+
+/* === SECTION SERVICES === */
+#services article {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    border-left: 5px solid var(--couleur-secondaire);
+    border-radius: 8px;
+    text-align: left;
+    max-width: 700px;
+}
+
+/* === SECTION TÉMOIGNAGES === */
+blockquote {
+    font-style: italic;
+    color: #555;
+    background: var(--couleur-claire);
+    padding: 30px;
+    margin: 30px auto;
+    border-radius: 10px;
+    max-width: 600px;
+    position: relative;
+}
+
+blockquote p {
+    margin: 0 0 10px 0;
+}
+
+blockquote footer {
+    font-weight: bold;
+    text-align: right;
+    display: block;
+}
+
+/* === FOOTER === */
+footer {
+    background: var(--couleur-primaire);
